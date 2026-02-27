@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sXdW8cC1eU8=",
+  "dgSpecHash": "0W2Z75DYFVE=",
   "success": true,
-  "projectFilePath": "c:\\New folder\\Projects\\C Sharp Project\\Hostel.Core\\Hostel.Core.csproj",
+  "projectFilePath": "C:\\New folder\\Projects\\C Sharp Project\\Hostel.Core\\Hostel.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hani7\\.nuget\\packages\\microsoft.data.sqlite.core\\8.0.0\\microsoft.data.sqlite.core.8.0.0.nupkg.sha512",
     "C:\\Users\\hani7\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.0\\microsoft.entityframeworkcore.8.0.0.nupkg.sha512",

@@ -1204,11 +1204,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\New folder\\Projects\\C Sharp Project\\Hostel.ConsoleApp\\Hostel.ConsoleApp.csproj",
+      "projectUniqueName": "C:\\New folder\\Projects\\C Sharp Project\\Hostel.ConsoleApp\\Hostel.ConsoleApp.csproj",
       "projectName": "Hostel.ConsoleApp",
-      "projectPath": "c:\\New folder\\Projects\\C Sharp Project\\Hostel.ConsoleApp\\Hostel.ConsoleApp.csproj",
+      "projectPath": "C:\\New folder\\Projects\\C Sharp Project\\Hostel.ConsoleApp\\Hostel.ConsoleApp.csproj",
       "packagesPath": "C:\\Users\\hani7\\.nuget\\packages\\",
-      "outputPath": "c:\\New folder\\Projects\\C Sharp Project\\Hostel.ConsoleApp\\obj\\",
+      "outputPath": "C:\\New folder\\Projects\\C Sharp Project\\Hostel.ConsoleApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\hani7\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -1223,8 +1223,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "c:\\New folder\\Projects\\C Sharp Project\\Hostel.Core\\Hostel.Core.csproj": {
-              "projectPath": "c:\\New folder\\Projects\\C Sharp Project\\Hostel.Core\\Hostel.Core.csproj"
+            "C:\\New folder\\Projects\\C Sharp Project\\Hostel.Core\\Hostel.Core.csproj": {
+              "projectPath": "C:\\New folder\\Projects\\C Sharp Project\\Hostel.Core\\Hostel.Core.csproj"
             }
           }
         }

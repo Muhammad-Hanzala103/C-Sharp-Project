@@ -1,0 +1,10 @@
+[
+  {
+    "Id": 1,
+    "Action": "Login",
+    "Module": "Auth",
+    "PerformedBy": "System Administrator",
+    "Timestamp": "2026-02-27T23:48:23.9975746+05:00",
+    "Details": "Successful login"
+  }
+]

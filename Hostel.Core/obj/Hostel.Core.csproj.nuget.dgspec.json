@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\New folder\\Projects\\C Sharp Project\\Hostel.Core\\Hostel.Core.csproj": {}
+    "C:\\New folder\\Projects\\C Sharp Project\\Hostel.Core\\Hostel.Core.csproj": {}
   },
   "projects": {
-    "c:\\New folder\\Projects\\C Sharp Project\\Hostel.Core\\Hostel.Core.csproj": {
+    "C:\\New folder\\Projects\\C Sharp Project\\Hostel.Core\\Hostel.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\New folder\\Projects\\C Sharp Project\\Hostel.Core\\Hostel.Core.csproj",
+        "projectUniqueName": "C:\\New folder\\Projects\\C Sharp Project\\Hostel.Core\\Hostel.Core.csproj",
         "projectName": "Hostel.Core",
-        "projectPath": "c:\\New folder\\Projects\\C Sharp Project\\Hostel.Core\\Hostel.Core.csproj",
+        "projectPath": "C:\\New folder\\Projects\\C Sharp Project\\Hostel.Core\\Hostel.Core.csproj",
         "packagesPath": "C:\\Users\\hani7\\.nuget\\packages\\",
-        "outputPath": "c:\\New folder\\Projects\\C Sharp Project\\Hostel.Core\\obj\\",
+        "outputPath": "C:\\New folder\\Projects\\C Sharp Project\\Hostel.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hani7\\AppData\\Roaming\\NuGet\\NuGet.Config"
