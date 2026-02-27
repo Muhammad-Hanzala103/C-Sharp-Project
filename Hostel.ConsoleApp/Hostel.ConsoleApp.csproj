@@ -8,8 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Hostel.Core.csproj" />
+    <ProjectReference Include="..\Hostel.Core\Hostel.Core.csproj" />
   </ItemGroup>
 
 </Project>
-
