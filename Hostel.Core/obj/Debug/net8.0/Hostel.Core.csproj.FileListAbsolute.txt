@@ -1,0 +1,6 @@
+c:\New folder\Projects\C Sharp Project\Hostel.Core\obj\Debug\net8.0\Hostel.Core.csproj.AssemblyReference.cache
+c:\New folder\Projects\C Sharp Project\Hostel.Core\obj\Debug\net8.0\Hostel.Core.GeneratedMSBuildEditorConfig.editorconfig
+c:\New folder\Projects\C Sharp Project\Hostel.Core\obj\Debug\net8.0\Hostel.Core.AssemblyInfoInputs.cache
+c:\New folder\Projects\C Sharp Project\Hostel.Core\obj\Debug\net8.0\Hostel.Core.AssemblyInfo.cs
+c:\New folder\Projects\C Sharp Project\Hostel.Core\obj\Debug\net8.0\Hostel.Core.csproj.CoreCompileInputs.cache
+c:\New folder\Projects\C Sharp Project\Hostel.Core\obj\Debug\net8.0\Hostel.Core.sourcelink.json
