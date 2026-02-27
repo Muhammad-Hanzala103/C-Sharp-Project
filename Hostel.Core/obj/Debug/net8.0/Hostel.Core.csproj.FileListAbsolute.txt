@@ -4,3 +4,10 @@ c:\New folder\Projects\C Sharp Project\Hostel.Core\obj\Debug\net8.0\Hostel.Core.
 c:\New folder\Projects\C Sharp Project\Hostel.Core\obj\Debug\net8.0\Hostel.Core.AssemblyInfo.cs
 c:\New folder\Projects\C Sharp Project\Hostel.Core\obj\Debug\net8.0\Hostel.Core.csproj.CoreCompileInputs.cache
 c:\New folder\Projects\C Sharp Project\Hostel.Core\obj\Debug\net8.0\Hostel.Core.sourcelink.json
+c:\New folder\Projects\C Sharp Project\Hostel.Core\bin\Debug\net8.0\Hostel.Core.deps.json
+c:\New folder\Projects\C Sharp Project\Hostel.Core\bin\Debug\net8.0\Hostel.Core.dll
+c:\New folder\Projects\C Sharp Project\Hostel.Core\bin\Debug\net8.0\Hostel.Core.pdb
+c:\New folder\Projects\C Sharp Project\Hostel.Core\obj\Debug\net8.0\Hostel.Core.dll
+c:\New folder\Projects\C Sharp Project\Hostel.Core\obj\Debug\net8.0\refint\Hostel.Core.dll
+c:\New folder\Projects\C Sharp Project\Hostel.Core\obj\Debug\net8.0\Hostel.Core.pdb
+c:\New folder\Projects\C Sharp Project\Hostel.Core\obj\Debug\net8.0\ref\Hostel.Core.dll
