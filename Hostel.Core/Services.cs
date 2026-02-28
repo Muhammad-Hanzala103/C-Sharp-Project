@@ -847,11 +847,10 @@ public class AdminService : IAdminService
     public async Task<Admin?> AuthenticateAsync(string username, string password)
     {
         var all = await _admins.GetAllAsync();
-        var hash = HashPassword(password);
         var admin = all.FirstOrDefault(a =>
             a.Username.Equals(username, StringComparison.OrdinalIgnoreCase) &&
-            a.PasswordHash == hash &&
-            a.IsActive);
+            a.IsActive &&
+            VerifyPassword(password, a.PasswordHash));
 
         if (admin != null)
         {
