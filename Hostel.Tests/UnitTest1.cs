@@ -129,7 +129,7 @@ public class RoomServiceTests : IDisposable
     [Fact]
     public async Task CreateRoom_SetsActive()
     {
-        var room = await _service.CreateRoomAsync(new Room { RoomNumber = "A-100", Capacity = 4, RoomType = RoomType.Quad, MonthlyRent = 5000m });
+        var room = await _service.CreateRoomAsync(new Room { RoomNumber = "A-100", Capacity = 4, RoomType = RoomType.Triple, MonthlyRent = 5000m });
         Assert.True(room.IsActive);
         Assert.Equal(0, room.CurrentOccupancy);
     }

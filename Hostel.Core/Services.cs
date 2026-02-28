@@ -985,7 +985,7 @@ public class DataSeeder : IDataSeeder
             ("B-103", 1, 0, 4, RoomType.Triple, 6000m, true, false),
             ("B-201", 2, 0, 3, RoomType.Triple, 7000m, true, false),
             ("B-202", 2, 0, 2, RoomType.Double, 9000m, true, true),
-            ("B-203", 2, 0, 4, RoomType.Quad, 5500m, false, false),
+            ("B-203", 2, 0, 4, RoomType.Triple, 5500m, false, false),
             ("C-101", 1, 0, 1, RoomType.Single, 14000m, true, true),
             ("C-102", 1, 0, 3, RoomType.Triple, 7500m, true, false),
             ("C-103", 1, 0, 6, RoomType.Dormitory, 3500m, false, false)
@@ -1054,7 +1054,7 @@ public class DataSeeder : IDataSeeder
             Description = "Double Sharing Room (AC)"
         });
         await _fees.CreateFeeStructureAsync(new FeeStructure {
-            RoomType = RoomType.Quad, MonthlyRent = 5000, MessFee = 8000,
+            RoomType = RoomType.Triple, MonthlyRent = 5000, MessFee = 8000,
             UtilityCharges = 1000, SecurityDeposit = 5000, LaundryFee = 500,
             Description = "Quad Sharing Room (Non-AC)"
         });
