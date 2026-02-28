@@ -211,7 +211,23 @@ public partial class HostelApp
         ConsoleUI.Pause();
     }
 
-    // ═══════════════════════════════════════════════════════════════
+    private async Task DefaulterListAsync()
+    {
+        ConsoleUI.ShowHeader("🚨 DEFAULTER LIST — Unpaid / Overdue Students");
+        var defaulters = await _payments.GetDefaultersAsync();
+        if (defaulters.Count == 0)
+        {
+            ConsoleUI.ShowSuccess("No defaulters found! All payments up to date. ✅");
+            ConsoleUI.Pause(); return;
+        }
+        var rows = defaulters.Select(p => new[] {
+            p.Id.ToString(), p.StudentName, $"Rs. {p.Amount:N0}",
+            $"{p.Month:D2}/{p.Year}", ConsoleUI.GetPaymentBadge(p.Status)
+        }).ToList();
+        ConsoleUI.ShowTable(new[] { "ID", "Student", "Amount Due", "Period", "Status" }, rows);
+        ConsoleUI.ShowDetailRow("Total Outstanding", $"Rs. {defaulters.Sum(p => p.Amount):N0}");
+        ConsoleUI.Pause();
+    }
     //  COMPLAINT MANAGEMENT
     // ═══════════════════════════════════════════════════════════════
     private async Task ComplaintMenuAsync()
