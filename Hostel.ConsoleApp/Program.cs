@@ -38,6 +38,28 @@ var adminService = new AdminService(adminRepo);
 
 Console.OutputEncoding = System.Text.Encoding.UTF8;
 
+// ═══════════════════════════════════════════════════════════════
+//  DATA SEEDING — Auto-populate demo data on first run
+// ═══════════════════════════════════════════════════════════════
+var seeder = new DataSeeder(
+    studentService, roomService, staffService, feeService,
+    messService, noticeService, paymentService, auditService, studentRepo);
+
+if (!await seeder.IsSeededAsync())
+{
+    Console.ForegroundColor = ConsoleColor.Yellow;
+    Console.WriteLine("\n    ⏳ First run detected — seeding demo data...");
+    Console.ResetColor();
+    await seeder.SeedAsync();
+    Console.ForegroundColor = ConsoleColor.Green;
+    Console.WriteLine("    ✅ Demo data loaded! (10 students, 15 rooms, 5 staff, menus & more)");
+    Console.ResetColor();
+    Console.WriteLine();
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  LAUNCH APP
+// ═══════════════════════════════════════════════════════════════
 var app = new HostelApp(
     studentService, roomService, paymentService, feeService,
     complaintService, staffService, visitorService, attendanceService,
