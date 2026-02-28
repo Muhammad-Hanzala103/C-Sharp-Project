@@ -21,6 +21,8 @@ public partial class HostelApp
     private readonly IAuditService _audit;
     private readonly IAdminService _admins;
     private string _currentUser = "Admin";
+    private DateTime _lastActivity = DateTime.Now;
+    private const int SESSION_TIMEOUT_MINUTES = 15;
 
     public HostelApp(
         IStudentService students, IRoomService rooms,
@@ -90,12 +92,14 @@ public partial class HostelApp
             if (admin != null)
             {
                 _currentUser = admin.FullName;
+                _lastActivity = DateTime.Now;
                 await _audit.LogActionAsync("Auth", "Login", _currentUser, "Successful login");
                 ConsoleUI.ShowSuccess($"Welcome back, {admin.FullName}!");
                 ConsoleUI.Pause();
                 return true;
             }
 
+            await _audit.LogActionAsync("Auth", "Failed Login", username, $"Failed attempt {attempt}/3");
             ConsoleUI.ShowError("Invalid username or password!");
             if (attempt < 3) ConsoleUI.Pause();
         }
@@ -133,6 +137,15 @@ public partial class HostelApp
     {
         while (true)
         {
+            // Session timeout check
+            if ((DateTime.Now - _lastActivity).TotalMinutes > SESSION_TIMEOUT_MINUTES)
+            {
+                ConsoleUI.ShowWarning($"Session expired after {SESSION_TIMEOUT_MINUTES} minutes of inactivity.");
+                await _audit.LogActionAsync("Auth", "Session Timeout", _currentUser, "Auto-logout due to inactivity");
+                ConsoleUI.Pause();
+                return;
+            }
+            _lastActivity = DateTime.Now;
             ConsoleUI.ShowMenu("MAIN MENU",
                 ("1", "Dashboard & Analytics", "📊"),
                 ("2", "Student Management", "👨‍🎓"),
