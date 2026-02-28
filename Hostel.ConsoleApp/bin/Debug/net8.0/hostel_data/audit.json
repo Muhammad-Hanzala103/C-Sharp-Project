@@ -14,5 +14,13 @@
     "PerformedBy": "System",
     "Timestamp": "2026-03-01T03:14:08.5632527+05:00",
     "Details": "Demo data seeded successfully \u2014 10 students, 15 rooms, 5 staff, 3 fee structures, weekly mess menu, 2 notices"
+  },
+  {
+    "Id": 3,
+    "Action": "Failed Login",
+    "Module": "Auth",
+    "PerformedBy": "admin",
+    "Timestamp": "2026-03-01T03:16:32.3302771+05:00",
+    "Details": "Failed attempt 1/3"
   }
 ]

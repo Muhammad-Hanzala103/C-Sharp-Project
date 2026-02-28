@@ -4,3 +4,4 @@
 [03:15:11] [INFO] [App] All services initialized successfully
 [03:15:51] [INFO] [App] Application starting...
 [03:15:51] [INFO] [App] All services initialized successfully
+[03:16:32] [WARN] [Auth] Failed login for 'admin' (attempt 1)
