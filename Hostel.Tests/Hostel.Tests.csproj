@@ -20,4 +20,8 @@
     <Using Include="Xunit" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Hostel.Core\Hostel.Core.csproj" />
+  </ItemGroup>
+
 </Project>

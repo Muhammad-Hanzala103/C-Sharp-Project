@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hostel.Core", "Hostel.Core\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hostel.ConsoleApp", "Hostel.ConsoleApp\Hostel.ConsoleApp.csproj", "{A7391404-3AC0-4032-A34B-CC79C25BDC87}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hostel.Tests", "Hostel.Tests\Hostel.Tests.csproj", "{F299BAD0-81B5-49E0-B67D-B6C60988FFC1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{A7391404-3AC0-4032-A34B-CC79C25BDC87}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7391404-3AC0-4032-A34B-CC79C25BDC87}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A7391404-3AC0-4032-A34B-CC79C25BDC87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F299BAD0-81B5-49E0-B67D-B6C60988FFC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F299BAD0-81B5-49E0-B67D-B6C60988FFC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F299BAD0-81B5-49E0-B67D-B6C60988FFC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F299BAD0-81B5-49E0-B67D-B6C60988FFC1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
