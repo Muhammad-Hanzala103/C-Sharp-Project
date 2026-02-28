@@ -80,7 +80,7 @@ public partial class HostelApp
                 Username = "admin",
                 FullName = "System Administrator",
                 Role = "SuperAdmin"
-            }, "Admin123");
+            }, "admin123");
         }
 
         ConsoleUI.ShowBanner();
