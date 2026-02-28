@@ -20,7 +20,7 @@ public static class ConsoleUI
     // ─────────────────────── ASCII ART BANNER ───────────────────────
     public static void ShowBanner()
     {
-        Console.Clear();
+        try { Console.Clear(); } catch { }
         Console.ForegroundColor = Primary;
         Console.WriteLine(@"
     ╔═══════════════════════════════════════════════════════════════════════════╗
@@ -51,7 +51,7 @@ public static class ConsoleUI
     // ─────────────────────── LOGIN SCREEN ───────────────────────
     public static void ShowLoginScreen()
     {
-        Console.Clear();
+        try { Console.Clear(); } catch { }
         Console.ForegroundColor = Primary;
         Console.WriteLine(@"
     ╔═══════════════════════════════════════════════════╗
@@ -66,7 +66,7 @@ public static class ConsoleUI
     // ─────────────────────── SECTION HEADERS ───────────────────────
     public static void ShowHeader(string title, ConsoleColor color = ConsoleColor.Cyan)
     {
-        Console.Clear();
+        try { Console.Clear(); } catch { }
         var line = new string('═', title.Length + 10);
         Console.ForegroundColor = color;
         Console.WriteLine($"    ╔{line}╗");
