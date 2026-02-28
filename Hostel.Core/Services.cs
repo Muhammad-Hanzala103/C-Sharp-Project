@@ -875,7 +875,7 @@ public class AdminService : IAdminService
         var admin = await _admins.GetByIdAsync(adminId)
             ?? throw new InvalidOperationException("Admin not found");
 
-        if (admin.PasswordHash != HashPassword(oldPassword))
+        if (!VerifyPassword(oldPassword, admin.PasswordHash))
             throw new InvalidOperationException("Incorrect current password");
 
         admin.PasswordHash = HashPassword(newPassword);
