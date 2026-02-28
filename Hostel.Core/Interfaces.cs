@@ -56,6 +56,7 @@ public interface IPaymentService
     Task<decimal> GetTotalRevenueAsync();
     Task<decimal> GetRevenueByMonthAsync(int month, int year);
     Task<string> GenerateReceiptAsync(int paymentId);
+    Task<IReadOnlyList<Payment>> GetDefaultersAsync();
 }
 
 public interface IFeeStructureService
@@ -64,6 +65,7 @@ public interface IFeeStructureService
     Task UpdateFeeStructureAsync(FeeStructure fee);
     Task<IReadOnlyList<FeeStructure>> GetAllFeeStructuresAsync();
     Task<FeeStructure?> GetFeeByRoomTypeAsync(RoomType roomType);
+    Task<int> GenerateMonthlyFeesAsync(int month, int year);
 }
 
 public interface IComplaintService
@@ -142,6 +144,15 @@ public interface IAdminService
     Task<Admin> CreateAdminAsync(Admin admin, string password);
     Task ChangePasswordAsync(int adminId, string oldPassword, string newPassword);
     Task<bool> AdminExistsAsync();
+    Task<bool> ValidatePasswordStrengthAsync(string password);
+}
+
+// ─────────────────────── DATA SEEDER ───────────────────────
+
+public interface IDataSeeder
+{
+    Task SeedAsync();
+    Task<bool> IsSeededAsync();
 }
 
 // ─────────────────────── REPORT MODELS ───────────────────────
