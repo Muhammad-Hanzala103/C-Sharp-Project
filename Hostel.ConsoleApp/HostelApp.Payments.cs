@@ -22,6 +22,7 @@ public partial class HostelApp
                 ("7", "Fee Structure Setup", "💵"),
                 ("8", "View Fee Structure", "👁️"),
                 ("9", "Revenue Summary", "📊"),
+                ("10", "Defaulter List", "🚨"),
                 ("0", "Back to Main Menu", "↩️"));
 
             var input = Console.ReadLine()?.Trim();
@@ -36,6 +37,7 @@ public partial class HostelApp
                 case "7": await SetupFeeStructureAsync(); break;
                 case "8": await ViewFeeStructureAsync(); break;
                 case "9": await RevenueSummaryAsync(); break;
+                case "10": await DefaulterListAsync(); break;
                 case "0": return;
                 default: ConsoleUI.ShowError("Invalid option!"); ConsoleUI.Pause(); break;
             }
