@@ -355,7 +355,7 @@ public class RoomAllocationEngine
             if (r.HasAttachedBath) score += 10;
             score -= (int)(r.MonthlyRent / 1000); // cheaper = higher
             return (r, Math.Max(0, score));
-        }).OrderByDescending(x => x.score).ToList();
+        }).OrderByDescending(x => x.Item2).ToList();
     }
 }
 
@@ -613,17 +613,18 @@ public class OccupancyForecaster
 
     public async Task<(int current, int capacity, double rate, string prediction)> ForecastAsync()
     {
-        var capacity = await _rooms.GetTotalCapacityAsync();
-        var occupancy = await _rooms.GetTotalOccupancyAsync();
-        var rate = capacity > 0 ? (double)occupancy / capacity * 100 : 0;
+        var allRooms = await _rooms.GetAllRoomsAsync();
+        var cap = allRooms.Sum(r => r.Capacity);
+        var occ = allRooms.Sum(r => r.CurrentOccupancy);
+        var occRate = cap > 0 ? (double)occ / cap * 100 : 0;
 
-        string prediction;
-        if (rate >= 90) prediction = "🔴 Critical — nearly full, need more rooms";
-        else if (rate >= 70) prediction = "🟡 High demand — expect full within 2 months";
-        else if (rate >= 50) prediction = "🟢 Healthy — balanced occupancy";
-        else prediction = "🔵 Low — marketing or outreach needed";
+        string pred;
+        if (occRate >= 90) pred = "🔴 Critical — nearly full, need more rooms";
+        else if (occRate >= 70) pred = "🟡 High demand — expect full within 2 months";
+        else if (occRate >= 50) pred = "🟢 Healthy — balanced occupancy";
+        else pred = "🔵 Low — marketing or outreach needed";
 
-        return (occupancy, capacity, Math.Round(rate, 1), prediction);
+        return (occ, cap, Math.Round(occRate, 1), pred);
     }
 
     public async Task<List<(string roomNumber, int vacant, decimal rent)>> GetVacancyListAsync()
